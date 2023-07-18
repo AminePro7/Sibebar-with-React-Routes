@@ -35,36 +35,36 @@ const Sidebar = () => {
 
   const Nav_animation = isTabletMid
     ? {
-        open: {
-          x: 0,
-          width: "16rem",
-          transition: {
-            damping: 40,
-          },
+      open: {
+        x: 0,
+        width: "16rem",
+        transition: {
+          damping: 40,
         },
-        closed: {
-          x: -250,
-          width: 0,
-          transition: {
-            damping: 40,
-            delay: 0.15,
-          },
+      },
+      closed: {
+        x: -250,
+        width: 0,
+        transition: {
+          damping: 40,
+          delay: 0.15,
         },
-      }
+      },
+    }
     : {
-        open: {
-          width: "16rem",
-          transition: {
-            damping: 40,
-          },
+      open: {
+        width: "16rem",
+        transition: {
+          damping: 40,
         },
-        closed: {
-          width: "4rem",
-          transition: {
-            damping: 40,
-          },
+      },
+      closed: {
+        width: "4rem",
+        transition: {
+          damping: 40,
         },
-      };
+      },
+    };
 
   const subMenusList = [
     {
@@ -83,9 +83,8 @@ const Sidebar = () => {
     <div>
       <div
         onClick={() => setOpen(false)}
-        className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${
-          open ? "block" : "hidden"
-        } `}
+        className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${open ? "block" : "hidden"
+          } `}
       ></div>
       <motion.div
         ref={sidebarRef}
@@ -166,15 +165,15 @@ const Sidebar = () => {
           animate={
             open
               ? {
-                  x: 0,
-                  y: 0,
-                  rotate: 0,
-                }
+                x: 0,
+                y: 0,
+                rotate: 0,
+              }
               : {
-                  x: -10,
-                  y: -200,
-                  rotate: 180,
-                }
+                x: -10,
+                y: -200,
+                rotate: 180,
+              }
           }
           transition={{ duration: 0 }}
           className="absolute w-fit h-fit md:block z-50 hidden right-2 bottom-3 cursor-pointer"
